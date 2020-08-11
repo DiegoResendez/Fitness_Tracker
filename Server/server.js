@@ -1,9 +1,9 @@
 // import Workout from "Workout.js";
-const Workout = require("./Models/Workout");
+// const Workout = require("./Models/Workout");
 const express = require("express");
 
 let mongoose = require("mongoose");
-// let db = require("./Models");
+let db = require("./Models");
 
 // var db = mongoose.connect("mongodb://localhost/fitnessTrackerDB", {
 //   useNewUrlParser: true,
@@ -11,7 +11,7 @@ let mongoose = require("mongoose");
 // });
 
 mongoose
-  .connect("mongodb://localhost:27017/fitnessTrackerDB", { useNewUrlParser: true })
+  .connect("mongodb://localhost:27017/fitnesTrackerDB", { useNewUrlParser: true })
   .then(() => {
     const app = express()
 
@@ -157,7 +157,9 @@ let workoutSeed = [
 // db.Workout.deleteMany({})
 // .then(() => 
 console.log(db.Workout);
-db.Workout.insertMany(workoutSeed)
+//Incorrect Syntax
+ db.insertMany(workoutSeed)
+// db.Workout.insertMany(workoutSeed)
 .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
