@@ -6,7 +6,7 @@ USE fitnessTrackerDB;
 
 CREATE TABLE Workout 
 (
-id int NOT NULL AUTO_INCREMENT,
+id int NOT NULL,
 type VARCHAR NOT NULL (35),
 name VARCHAR NOT NULL (35),
 duration int NOT NULL,
