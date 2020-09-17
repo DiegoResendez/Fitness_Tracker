@@ -1,5 +1,5 @@
-let mongoose = require("mongoose");
-let db = require("../models");
+let mongoose = require("../../node_modules/mongoose");
+let db = require("../Models");
 
 mongoose.connect("mongodb://localhost/workout", {
   useNewUrlParser: true,

@@ -1,8 +1,8 @@
-const mongoose = require("mongoose");
+const mongoose = require("../../node_modules/mongoose");
 const mongooseSchema = mongoose.Schema;
 // let db = require("./Models/Workout");
 
- 
+
 const workoutSchema = new mongooseSchema(
     {
       day:
@@ -32,8 +32,7 @@ const workoutSchema = new mongooseSchema(
             weight: Number,
             reps: Number,
             sets: Number,
-            unique: true,
-            required: true,
+            distance: Number
           }]
       });
  
